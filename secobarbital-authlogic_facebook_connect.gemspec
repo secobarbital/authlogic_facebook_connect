@@ -4,20 +4,20 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{jerryvos-authlogic_facebook_connect}
-  s.version = "1.0.2"
+  s.name = %q{secobarbital-authlogic_facebook_connect}
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["kalasjocke"]
-  s.date = %q{2009-11-22}
+  s.authors = ["Joakim Ekberg", "Seggy Umboh"]
+  s.date = %q{2010-03-19}
+  s.email = ["jocke.ekberg@gmail.com", "sumboh@thingbuzz.com"]
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
   s.files = [
-    ".gitignore",
-     "README.rdoc",
+    "README.rdoc",
      "Rakefile",
-     "VERSION",
+     "Version",
      "init.rb",
      "lib/authlogic_facebook_connect.rb",
      "lib/authlogic_facebook_connect/acts_as_authentic.rb",
@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/kalasjocke/authlogic_facebook_connect}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{Extension of the Authlogic library to add Facebook Connect support built upon the excellent facebooker gem}
 
   if s.respond_to? :specification_version then
@@ -36,15 +36,15 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<facebooker>, [">= 0"])
       s.add_runtime_dependency(%q<authlogic>, [">= 0"])
+      s.add_runtime_dependency(%q<facebooker>, [">= 0"])
     else
-      s.add_dependency(%q<facebooker>, [">= 0"])
       s.add_dependency(%q<authlogic>, [">= 0"])
+      s.add_dependency(%q<facebooker>, [">= 0"])
     end
   else
-    s.add_dependency(%q<facebooker>, [">= 0"])
     s.add_dependency(%q<authlogic>, [">= 0"])
+    s.add_dependency(%q<facebooker>, [">= 0"])
   end
 end
 

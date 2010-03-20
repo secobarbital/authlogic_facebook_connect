@@ -4,18 +4,18 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "authlogic_facebook_connect"
+    gem.name = "secobarbital-authlogic_facebook_connect"
     gem.summary = %Q{Extension of the Authlogic library to add Facebook Connect support built upon the excellent facebooker gem}
-    # gem.description = %Q{}
-    # gem.email = ""
+    gem.email = ["jocke.ekberg@gmail.com", "sumboh@thingbuzz.com"]
     gem.homepage = "http://github.com/kalasjocke/authlogic_facebook_connect"
-    gem.authors = ["kalasjocke"]
+    gem.authors = ["Joakim Ekberg", "Seggy Umboh"]
 
-    gem.add_dependency("facebooker")
-    gem.add_dependency("authlogic")
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.add_dependency "authlogic"
+    gem.add_dependency "facebooker"
+    
+    gem.files.exclude ".gitignore"
+    gem.files.exclude "*.gemspec"
   end
-  Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end
